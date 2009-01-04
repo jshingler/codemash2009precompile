@@ -1,4 +1,4 @@
 grails/blog/web-app/WEB-INF/classes
 *.log
 grails/.metadata
-grails/.metadata/.lock
+.lock
