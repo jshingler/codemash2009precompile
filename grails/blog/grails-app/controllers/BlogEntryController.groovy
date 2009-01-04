@@ -17,7 +17,8 @@ class BlogEntryController {
             flash.message = "BlogEntry not found with id ${params.id}"
             redirect(action:list)
         }
-        else { return [ blogEntryInstance : blogEntryInstance ] }
+        else { render(view:'list',model: [ blogEntryInstanceList : [blogEntryInstance], print: params.print ? true : false ])  }
+//        else { return [ blogEntryInstance : blogEntryInstance ] }
     }
 
     def delete = {
