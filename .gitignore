@@ -2,5 +2,5 @@ grails\blog\web-app\WEB-INF\classes
 grails\.metadata
 .lock
 *.log
-groovy\bin-groovy
-groovy\build
+groovy/bin-groovy
+groovy/build
