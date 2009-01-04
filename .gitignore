@@ -1,5 +1,6 @@
 grails\blog\web-app\WEB-INF\classes
 grails\.metadata
+grails/.metadata
 .lock
 *.log
 
