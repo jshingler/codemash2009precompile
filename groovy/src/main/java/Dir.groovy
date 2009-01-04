@@ -1,0 +1,1 @@
+def p = "cmd /c dir".execute()println p.text
