@@ -1,0 +1,10 @@
+class BlogEntry {
+	String title
+	String body
+	Date dateCreated
+	Date lastUpdated
+
+	String toString () {
+	    return "BlogEntry ${id} = ${title}"
+	}
+}

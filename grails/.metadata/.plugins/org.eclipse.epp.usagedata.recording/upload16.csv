@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.wst.html.core,1.1.202.v200808281704,org.eclipse.wst.html.core,1231031600503
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.edit.copy,1231031610206
+activated,view,org.eclipse.wst.common.snippets,1.1.200.v200805140415,org.eclipse.wst.common.snippets.internal.ui.SnippetsView,1231031727159
+activated,editor,org.codehaus.groovy.eclipse.ui,1.5.7.20081120_2330,org.codehaus.groovy.eclipse.editor.GroovyEditor,1231031727941
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.edit.copy,1231031732566
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1231031949082
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1231031954457
+activated,view,org.eclipse.wst.common.snippets,1.1.200.v200805140415,org.eclipse.wst.common.snippets.internal.ui.SnippetsView,1231031954488
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1231031957707
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.edit.paste,1231031963238
+no handler,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.edit.undo,1231031967660
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1231031969738
+activated,editor,org.codehaus.groovy.eclipse.ui,1.5.7.20081120_2330,org.codehaus.groovy.eclipse.editor.GroovyEditor,1231031970769
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.edit.copy,1231031973769
+activated,view,org.eclipse.wst.common.snippets,1.1.200.v200805140415,org.eclipse.wst.common.snippets.internal.ui.SnippetsView,1231031975832
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1231031979504
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.edit.paste,1231031983801
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1231031987863
+activated,view,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.PackageExplorer,1231031990301
+opened,editor,org.codehaus.groovy.eclipse.ui,1.5.7.20081120_2330,org.codehaus.groovy.eclipse.editor.GroovyEditor,1231031991832
+stopped,bundle,org.codehaus.grails.eclipse,1.0.0.20081120_2330,org.codehaus.grails.eclipse,1231031991863
+activated,editor,org.codehaus.groovy.eclipse.ui,1.5.7.20081120_2330,org.codehaus.groovy.eclipse.editor.GroovyEditor,1231031992019
+activated,view,org.eclipse.wst.common.snippets,1.1.200.v200805140415,org.eclipse.wst.common.snippets.internal.ui.SnippetsView,1231031994316
+activated,editor,org.codehaus.groovy.eclipse.ui,1.5.7.20081120_2330,org.codehaus.groovy.eclipse.editor.GroovyEditor,1231031997347
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.file.save,1231032002176
