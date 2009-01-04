@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="36" version="2.0">
+<workbench progressCount="32" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="22" y="29">
 <fastViewData fastViewLocation="1024"/>
@@ -31,12 +31,27 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor focus="true" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Blog.groovy" partName="Blog.groovy" path="C:/workspaces/CodeMash2009Precompile/grails/blog/grails-app/domain/Blog.groovy" title="Blog.groovy" tooltip="blog/grails-app/domain/Blog.groovy" workbook="DefaultEditorWorkbook">
+<editor id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Blog.groovy" partName="Blog.groovy" path="C:/workspaces/CodeMash2009Precompile/grails/blog/grails-app/domain/Blog.groovy" title="Blog.groovy" tooltip="blog/grails-app/domain/Blog.groovy" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/blog/grails-app/domain/Blog.groovy"/>
+<editorState selectionLength="0" selectionOffset="284"/>
+</editor>
+<editor activePart="true" focus="true" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="BlogEntry.groovy" partName="BlogEntry.groovy" path="C:/workspaces/CodeMash2009Precompile/grails/blog/grails-app/domain/BlogEntry.groovy" title="BlogEntry.groovy" tooltip="blog/grails-app/domain/BlogEntry.groovy" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/blog/grails-app/domain/BlogEntry.groovy"/>
+<editorState selectionLength="0" selectionOffset="0"/>
+</editor>
+<editor id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="BlogController.groovy" partName="BlogController.groovy" path="C:/workspaces/CodeMash2009Precompile/grails/blog/grails-app/controllers/BlogController.groovy" title="BlogController.groovy" tooltip="blog/grails-app/controllers/BlogController.groovy" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/blog/grails-app/controllers/BlogController.groovy"/>
+<editorState selectionLength="0" selectionOffset="49"/>
+</editor>
+<editor id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="BlogEntryController.groovy" partName="BlogEntryController.groovy" path="C:/workspaces/CodeMash2009Precompile/grails/blog/grails-app/controllers/BlogEntryController.groovy" title="BlogEntryController.groovy" tooltip="blog/grails-app/controllers/BlogEntryController.groovy" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/blog/grails-app/controllers/BlogEntryController.groovy"/>
 <editorState selectionLength="0" selectionOffset="0"/>
 </editor>
 </editors>
@@ -50,8 +65,7 @@
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors (74 items)"/>
+<expanded>&#x0A;<category IMemento.internal.id="Errors (74 items)"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="54" org.eclipse.ui.ide.markerType="79" org.eclipse.ui.ide.pathField="104" org.eclipse.ui.ide.resourceField="79" org.eclipse.ui.ide.severityAndDescriptionField="250"/>
@@ -123,7 +137,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.codehaus.groovy.eclipse.editor.GroovyEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
@@ -175,53 +189,37 @@
 <view id="org.eclipse.ui.views.TaskList"/>
 <view id="org.codehaus.groovy.eclipse.refactoring.core.hierarchy.view.HierarchyView"/>
 <fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="topLeft">
-<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@137ef34" ratio="0.75" ratioLeft="756" ratioRight="252" relationship="2" relative="topLeft">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@137ef34" ratio="0.75" ratioLeft="756" ratioRight="252" relationship="2" relative="topLeft">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info part="org.eclipse.gef.ui.palette_view" ratio="0.25992063" ratioLeft="262" ratioRight="746" relationship="2" relative="topLeft"/>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@de24c5" ratio="0.65898615" ratioLeft="429" ratioRight="222" relationship="4" relative="org.eclipse.gef.ui.palette_view">
-<folder activePageID="org.codehaus.groovy.eclipse.refactoring.core.hierarchy.view.HierarchyView" appearance="2" expanded="2">
-<page content="org.codehaus.groovy.eclipse.refactoring.core.hierarchy.view.HierarchyView" label="Groovy Hierarchy"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@de24c5" ratio="0.65898615" ratioLeft="429" ratioRight="222" relationship="4" relative="org.eclipse.gef.ui.palette_view">&#x0A;<folder activePageID="org.codehaus.groovy.eclipse.refactoring.core.hierarchy.view.HierarchyView" appearance="2" expanded="2">&#x0A;<page content="org.codehaus.groovy.eclipse.refactoring.core.hierarchy.view.HierarchyView" label="Groovy Hierarchy"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="bottomRight" ratio="0.5" ratioLeft="373" ratioRight="373" relationship="2" relative="org.eclipse.ui.internal.ViewStack@de24c5">
-<folder activePageID="org.eclipse.ui.views.TaskList" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<info folder="true" part="bottomRight" ratio="0.5" ratioLeft="373" ratioRight="373" relationship="2" relative="org.eclipse.ui.internal.ViewStack@de24c5">&#x0A;<folder activePageID="org.eclipse.ui.views.TaskList" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.team.ui.GenericHistoryView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.15951742" ratioLeft="119" ratioRight="627" relationship="2" relative="org.eclipse.gef.ui.palette_view"/>
-<info folder="true" part="bottomLeft" ratio="0.49923196" ratioLeft="325" ratioRight="326" relationship="4" relative="topLeft">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="bottomLeft" ratio="0.49923196" ratioLeft="325" ratioRight="326" relationship="4" relative="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="Task List"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
@@ -367,8 +365,44 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/blog/grails-app/domain/Blog.groovy"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/blog/grails-app/domain/BlogEntry.groovy"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/blog/grails-app/controllers/BlogController.groovy"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/blog/grails-app/controllers/BlogEntryController.groovy"/>
 </editors>
-<item active="true" historyLabel="Blog.groovy" index="0">
+<item historyLabel="Blog.groovy" index="0">
+<position/>
+</item>
+<item historyLabel="BlogEntry.groovy" index="1">
+<position/>
+</item>
+<item historyLabel="BlogController.groovy" index="2">
+<position/>
+</item>
+<item historyLabel="BlogEntry.groovy" index="1">
+<position info="not_deleted" x="351" y="0"/>
+</item>
+<item historyLabel="BlogEntryController.groovy" index="3">
+<position/>
+</item>
+<item historyLabel="Blog.groovy" index="0">
+<position/>
+</item>
+<item historyLabel="BlogEntry.groovy" index="1">
+<position info="not_deleted" x="351" y="0"/>
+</item>
+<item historyLabel="Blog.groovy" index="0">
+<position/>
+</item>
+<item historyLabel="BlogEntry.groovy" index="1">
+<position info="not_deleted" x="351" y="0"/>
+</item>
+<item historyLabel="Blog.groovy" index="0">
+<position info="not_deleted" x="284" y="0"/>
+</item>
+<item historyLabel="BlogController.groovy" index="2">
+<position info="not_deleted" x="49" y="0"/>
+</item>
+<item active="true" historyLabel="BlogEntryController.groovy" index="3">
 <position/>
 </item>
 </navigationHistory>
@@ -384,11 +418,19 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.intro.impl.presentations.IntroLaunchBar"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="BlogEntryController.groovy" tooltip="blog/grails-app/controllers/BlogEntryController.groovy">
+<persistable path="/blog/grails-app/controllers/BlogEntryController.groovy"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="BlogController.groovy" tooltip="blog/grails-app/controllers/BlogController.groovy">
+<persistable path="/blog/grails-app/controllers/BlogController.groovy"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="BlogEntry.groovy" tooltip="blog/grails-app/domain/BlogEntry.groovy">
+<persistable path="/blog/grails-app/domain/BlogEntry.groovy"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Blog.groovy" tooltip="blog/grails-app/domain/Blog.groovy">
 <persistable path="/blog/grails-app/domain/Blog.groovy"/>
 </file>
