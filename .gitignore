@@ -1,2 +1,3 @@
-grails/blog/web-app/WEB-INF/classes
+grails/blog/web-app/WEB-INF/classes/
 *.log
+grails/.metadata/
