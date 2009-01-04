@@ -80,4 +80,9 @@ class BlogEntryController {
             render(view:'create',model:[blogEntryInstance:blogEntryInstance])
         }
     }
+    
+    def preview = {BlogEntry be ->
+		log.debug "Preview new entry..."
+		render(template: "preview", model: [blogEntryInstance: be])
+	}
 }
