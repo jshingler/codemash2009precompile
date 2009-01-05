@@ -24,6 +24,7 @@
             </g:hasErrors>
             <g:form method="post" >
                 <input type="hidden" name="id" value="${blogInstance?.id}" />
+                <input type="hidden" name="blog" value="${blogInstance?.blogid}" />
                 <div class="dialog">
                     <table>
                         <tbody>
@@ -84,7 +85,7 @@
     <li><g:link controller="blogEntry" action="show" id="${b.id}">${b?.encodeAsHTML()}</g:link></li>
 </g:each>
 </ul>
-<g:link controller="blogEntry" params="['blog.id':blogInstance?.id]" action="create">Add BlogEntry</g:link>
+<g:link controller="blogEntry" params="['blog.id':blogInstance?.id,blog:blogInstance.blogid]" action="create">Add BlogEntry</g:link>
 
                                 </td>
                             </tr> 

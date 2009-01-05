@@ -2,6 +2,9 @@
 
 
 	      		<ul>
+	      		  <li><g:link controller='feed'>
+                      <img src="${createLinkTo(dir:'images',file:'feed-icon-16x16.jpg')}" alt="RSS"/>RSS</g:link>
+                  </li>
 	      		  <li><a class="home" href="${createLinkTo(dir:'')}">Home</a></li>
 	      		  <li><g:link controller="blog" action="create">New Blog</g:link></li>
 	      		  <li><g:link controller="blog" action="list">List Blogs</g:link></li>

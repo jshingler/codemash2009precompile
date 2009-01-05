@@ -17,9 +17,9 @@
         <div id="doc3" class="yui-t5">
             <div id="hd">
 
-                <div id="hdtitle">Grails Blogs</div>
-                
-                <div id="hdsubtitle">Blog subtitle</div>
+                <div id="hdtitle"><a href="<g:createLinkTo dir="${params.blog}/"/>"><g:blogTitle blogid="${params.blog}"/></a></div>
+
+                <div id="hdsubtitle"><g:blogByline blogid="${params.blog}"/></div>
 
             </div>
             <div id="bd"><!-- start body -->
