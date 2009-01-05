@@ -85,5 +85,6 @@
 	<classpathentry kind="var" path="GRAILS_HOME/dist/grails-web-1.0.4.jar"/>
 	<classpathentry kind="var" path="GRAILS_HOME/dist/grails-webflow-1.0.4.jar"/>
 	<classpathentry kind="var" path="GRAILS_HOME"/>
+	<classpathentry kind="lib" path="plugins/jsecurity-0.4-SNAPSHOT/lib/jsecurity-jdk14.jar"/>
 	<classpathentry kind="output" path="web-app/WEB-INF/classes"/>
 </classpath>

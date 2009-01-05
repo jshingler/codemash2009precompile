@@ -1,3 +1,5 @@
+import org.jsecurity.SecurityUtils
+
 class BlogEntryController {
 	
 	def index = { redirect(action:list,params:params) }
@@ -74,6 +76,8 @@ class BlogEntryController {
 	
 	def save = {
 		def blogEntryInstance = new BlogEntry(params)
+		// set the user
+		//JLS
 		if(!blogEntryInstance.hasErrors() && blogEntryInstance.save()) {
 			flash.message = "BlogEntry ${blogEntryInstance.id} created"
 			redirect(action:show,id:blogEntryInstance.id)
@@ -133,4 +137,31 @@ class BlogEntryController {
 			response.sendError(response.SC_NOT_FOUND);
 		}
 	}
+	
+	def homePage = {
+        def baseUri = request.scheme + "://" + 
+            request.serverName + ":" + request.serverPort +
+            grailsAttributes.getApplicationUri(request)
+
+        def blogId = params.blog
+        def blog = Blog.findByBlogid(blogId)
+        if (blog) {
+            // display most recent 5 entries
+            def entries = BlogEntry.findAllByBlog(blog, [sort: 'dateCreated', order: 'desc', max: 5])
+            render(view: 'displayEntry', 
+            		model:  [blogObj: blog, entries: entries, 
+            		         print: params.print ? true : false, baseUri: baseUri ])
+        } else {
+            response.sendError(response.SC_NOT_FOUND);
+        }
+    }
+	
+    def userHomePage = {
+	    def subject = SecurityUtils.subject
+		def user = JsecUser.findByUsername(subject.principal)
+		def blog = Blog.findByUser(user)
+        params.blog = blog.blogid
+
+		redirect(action: homePage, params: params)
+    }
 }

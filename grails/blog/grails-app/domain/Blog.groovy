@@ -4,12 +4,13 @@ class Blog {
 	String byline
 	Date dateCreated
 	Date lastUpdated
+	JsecUser user
 	
 	static hasMany = [ blogEntries : BlogEntry]
 	
 	static constraints = {
 		title(blank: false, size: 1..128)
-		byline(blank: false, size: 1..128)
+		byline(nullable: true)
 		blogid(blank: false)
 		dateCreated()
 		lastUpdated(nullable: true)
