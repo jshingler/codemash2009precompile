@@ -83,6 +83,7 @@
             <div class="buttons">
                 <g:form>
                     <input type="hidden" name="id" value="${blogInstance?.id}" />
+                    <input type="hidden" name="blog" value="${blogInstance?.blogid}" />
                     <span class="button"><g:actionSubmit class="edit" value="Edit" /></span>
                     <span class="button"><g:actionSubmit class="delete" onclick="return confirm('Are you sure?');" value="Delete" /></span>
                 </g:form>
