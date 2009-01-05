@@ -19,6 +19,12 @@
 
                 <div id="hdtitle"><a href="<g:createLinkTo dir="${params.blog}/"/>"><g:blogTitle blogid="${params.blog}"/></a></div>
 
+                <div style="float: right; position: relative; margin-right: 7px; font-size: medium; ">
+                    <g:form url='[controller: "blog", action: "search"]' id="searchableForm" name="searchableForm" method="get">
+                        <g:textField name="query" value="${params.query}" size="25"/> <input type="submit" value="Search" />
+                    </g:form>
+                </div>
+
                 <div id="hdsubtitle"><g:blogByline blogid="${params.blog}"/></div>
 
             </div>

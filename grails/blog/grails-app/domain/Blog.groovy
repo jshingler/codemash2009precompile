@@ -15,6 +15,12 @@ class Blog {
 		lastUpdated(nullable: true)
 	}
 	
+	static searchable = {
+        only = ["blogid", "title", "byline"] 
+        
+        root : false
+    }
+	
 	String toString () {
 		return "Blog ${id} = ${title}"
 	}

@@ -12,7 +12,7 @@
             <div class="blogentry">
                 <div class="blogRolodex"><g:blogDateRolodex date="${entry?.dateCreated}"/></div>
                 <div class="blogtitle">
-                    <g:link controller="blogEntry" action="show" params="[id: entry.id, blog: entry.blog.blogid]">${entry?.title}</g:link>
+                    <a href="/${meta(name:"app.name")}${entry.toPermalink()}">${entry?.title}</a>
                 </div>
                 
                 <g:if test="${print!=true}">

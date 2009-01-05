@@ -79,4 +79,13 @@ class BlogController {
             render(view:'create',model:[blogInstance:blogInstance])
         }
     }
+    
+    def search = {
+        def query = params.query
+
+		def results
+		results = BlogEntry.search(params.query, params)
+        
+        return [ results: results, query: query, params : params ]
+    }
 }

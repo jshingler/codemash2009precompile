@@ -1,0 +1,13 @@
+org.codehaus.groovy.grails.plugins.searchable
+org.codehaus.groovy.grails.plugins.searchable.compass
+org.codehaus.groovy.grails.plugins.searchable.compass.config
+org.codehaus.groovy.grails.plugins.searchable.compass.config.mapping
+org.codehaus.groovy.grails.plugins.searchable.compass.converter
+org.codehaus.groovy.grails.plugins.searchable.compass.index
+org.codehaus.groovy.grails.plugins.searchable.compass.mapping
+org.codehaus.groovy.grails.plugins.searchable.compass.search
+org.codehaus.groovy.grails.plugins.searchable.compass.spring
+org.codehaus.groovy.grails.plugins.searchable.compass.support
+org.codehaus.groovy.grails.plugins.searchable.lucene
+org.codehaus.groovy.grails.plugins.searchable.support
+org.codehaus.groovy.grails.plugins.searchable.util
