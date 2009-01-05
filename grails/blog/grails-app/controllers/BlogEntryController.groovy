@@ -67,7 +67,9 @@ class BlogEntryController {
 	def create = {
 		def blogEntryInstance = new BlogEntry()
 		blogEntryInstance.properties = params
-		return ['blogEntryInstance':blogEntryInstance]
+		blogEntryInstance.title = "Title"
+		blogEntryInstance.body = "<p>\n\n</p>"
+		render(view:'edit',model: ['blogEntryInstance':blogEntryInstance])
 	}
 	
 	def save = {
