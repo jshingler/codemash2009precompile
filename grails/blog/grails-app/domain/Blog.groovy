@@ -9,7 +9,7 @@ class Blog {
 	
 	static constraints = {
 		title(blank: false, size: 1..128)
-		byline(blank: false, size: 1..128)
+		byline(nullable: true)
 		blogid(blank: false)
 		dateCreated()
 		lastUpdated(nullable: true)
