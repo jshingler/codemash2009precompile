@@ -2,7 +2,8 @@ import org.jsecurity.SecurityUtils
 
 class BlogEntryController {
 	
-	def index = { redirect(action:list,params:params) }
+	def index = { redirect(action:list,params:params)
+	}
 	
 	// the delete, save and update actions only accept POST requests
 	def allowedMethods = [delete:'POST', save:'POST', update:'POST']
@@ -19,7 +20,8 @@ class BlogEntryController {
 			flash.message = "BlogEntry not found with id ${params.id}"
 			redirect(action:list)
 		}
-		else { render(view:'list',model: [ blogEntryInstanceList : [blogEntryInstance], print: params.print ? true : false ])  }
+		else { render(view:'list',model: [ blogEntryInstanceList : [blogEntryInstance], print: params.print ? true : false ])
+		}
 		//        else { return [ blogEntryInstance : blogEntryInstance ] }
 	}
 	
@@ -76,15 +78,24 @@ class BlogEntryController {
 	
 	def save = {
 		def blogEntryInstance = new BlogEntry(params)
-		// set the user
-		//JLS
-		if(!blogEntryInstance.hasErrors() && blogEntryInstance.save()) {
+		
+		if (blogEntryInstance.hasErrors()) {
+			render(view:'create',model:[blogEntryInstance:blogEntryInstance])
+			return
+		} else {
+			def subject = SecurityUtils.subject
+			def user = JsecUser.findByUsername(subject.principal)
+			def blog = Blog.findByUser(user)
+			
+			log.debug "Adding new entry to blog ${blog?.title}"
+			blog?.addToBlogEntries(blogEntryInstance)?.save()
+			blogEntryInstance.save()
+					
 			flash.message = "BlogEntry ${blogEntryInstance.id} created"
 			redirect(action:show,id:blogEntryInstance.id)
+			
 		}
-		else {
-			render(view:'create',model:[blogEntryInstance:blogEntryInstance])
-		}
+		
 	}
 	
 	def preview = {BlogEntry be ->
@@ -124,11 +135,13 @@ class BlogEntryController {
 		def blog = Blog.findByBlogid(blogId)
 		if (blog) {
 			log.info "Blog name is ${blog.title}"
+			
 			def entries = BlogEntry.findAllByBlogAndDateCreatedBetween(blog, blogStartDate, blogEndDate, [sort: 'dateCreated', order: 'desc'])
 			log.info "Found some entries... for $blogId then we're ${entries.size()}"
 			if (params.id) {
 				// if we have an id, match that entry..
-				def filtered = entries.findAll { it.title.encodeAsNiceTitle() == params.id }
+				def filtered = entries.findAll { it.title.encodeAsNiceTitle() == params.id
+				}
 				if (filtered.size())
 				entries = filtered
 			}
@@ -139,29 +152,29 @@ class BlogEntryController {
 	}
 	
 	def homePage = {
-        def baseUri = request.scheme + "://" + 
-            request.serverName + ":" + request.serverPort +
-            grailsAttributes.getApplicationUri(request)
-
-        def blogId = params.blog
-        def blog = Blog.findByBlogid(blogId)
-        if (blog) {
-            // display most recent 5 entries
-            def entries = BlogEntry.findAllByBlog(blog, [sort: 'dateCreated', order: 'desc', max: 5])
-            render(view: 'displayEntry', 
-            		model:  [blogObj: blog, entries: entries, 
-            		         print: params.print ? true : false, baseUri: baseUri ])
-        } else {
-            response.sendError(response.SC_NOT_FOUND);
-        }
-    }
+		def baseUri = request.scheme + "://" + 
+		request.serverName + ":" + request.serverPort +
+		grailsAttributes.getApplicationUri(request)
+		
+		def blogId = params.blog
+		def blog = Blog.findByBlogid(blogId)
+		if (blog) {
+			// display most recent 5 entries
+			def entries = BlogEntry.findAllByBlog(blog, [sort: 'dateCreated', order: 'desc', max: 5])
+			render(view: 'displayEntry', 
+			model:  [blogObj: blog, entries: entries, 
+			print: params.print ? true : false, baseUri: baseUri ])
+		} else {
+			response.sendError(response.SC_NOT_FOUND);
+		}
+	}
 	
-    def userHomePage = {
-	    def subject = SecurityUtils.subject
+	def userHomePage = {
+		def subject = SecurityUtils.subject
 		def user = JsecUser.findByUsername(subject.principal)
 		def blog = Blog.findByUser(user)
-        params.blog = blog.blogid
-
+		params.blog = blog.blogid
+		
 		redirect(action: homePage, params: params)
-    }
+	}
 }
