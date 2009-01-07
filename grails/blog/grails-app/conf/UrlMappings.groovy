@@ -18,7 +18,7 @@ class UrlMappings {
     
     "/$blog/" {
           controller = "blogEntry"
-          action = "list"
+          action = "homePage"
     }
       
 	  "500"(view:'/error')
