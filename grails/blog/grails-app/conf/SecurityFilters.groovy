@@ -22,7 +22,7 @@ class SecurityFilters {
             }
         }
 		
-		blog(controller: "blog", action: "(edit|update|delete)") {
+		blog(controller: "(blog|blogEntry)", action: "(edit|update|delete)") {
             before = {
                 accessControl {
 				    def userId = 0
