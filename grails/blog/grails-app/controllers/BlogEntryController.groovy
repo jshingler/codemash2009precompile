@@ -79,23 +79,23 @@ class BlogEntryController {
 	def save = {
 		def blogEntryInstance = new BlogEntry(params)
 		
-		def subject = SecurityUtils.subject
-		def user = JsecUser.findByUsername(subject.principal)
-		def blog = Blog.findByUser(user)
-		
-		log.debug "Adding new entry to blog ${blog?.title}"
-		blog?.addToBlogEntries(blogEntryInstance)?.save()
-		blogEntryInstance.errors.allErrors.each {
-			println it
-		}
-		
-		if(!blogEntryInstance.hasErrors() && blogEntryInstance.save()) {
+		if (blogEntryInstance.hasErrors()) {
+			render(view:'create',model:[blogEntryInstance:blogEntryInstance])
+			return
+		} else {
+			def subject = SecurityUtils.subject
+			def user = JsecUser.findByUsername(subject.principal)
+			def blog = Blog.findByUser(user)
+			
+			log.debug "Adding new entry to blog ${blog?.title}"
+			blog?.addToBlogEntries(blogEntryInstance)?.save()
+			blogEntryInstance.save()
+					
 			flash.message = "BlogEntry ${blogEntryInstance.id} created"
 			redirect(action:show,id:blogEntryInstance.id)
+			
 		}
-		else {
-			render(view:'create',model:[blogEntryInstance:blogEntryInstance])
-		}
+		
 	}
 	
 	def preview = {BlogEntry be ->
@@ -135,8 +135,6 @@ class BlogEntryController {
 		def blog = Blog.findByBlogid(blogId)
 		if (blog) {
 			log.info "Blog name is ${blog.title}"
-			
-			println "XXXXXXXXXXXXXX: blog: ${blog}"
 			
 			def entries = BlogEntry.findAllByBlogAndDateCreatedBetween(blog, blogStartDate, blogEndDate, [sort: 'dateCreated', order: 'desc'])
 			log.info "Found some entries... for $blogId then we're ${entries.size()}"
